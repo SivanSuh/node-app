@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("./partials/head.ejs")%>
+  <body>
+    <%-include("./partials/nav.ejs")%>
+    <div class="detay content">
+      <h2><%= ders.baslik%></h2>
+      <div class="content">
+        <p><%= ders.icerik %></p>
+        <p>Olusturlma Tarihi : <%= ders.createdAt %></p>
+      </div>
+      <a class="sil" data-doc="<%=ders._id %>">SİL</a>
+    </div>
+    <script>
+      const silButton = document.querySelector("a.sil");
+      silButton.addEventListener("click", (e) => {
+        const endpoint = `/dersler/${silButton.dataset.doc}`;
+
+        fetch(endpoint, { method: "DELETE" })
+          .then((response) => response.json())
+          .then((data) => (window.location.href = data.redirect))
+          .catch((err) => console.log(err));
+      });
+    </script>
+  </body>
+</html>

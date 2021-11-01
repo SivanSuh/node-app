@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("./partials/head")%>
+  <body>
+    <%-include("./partials/nav.ejs") %>
+    <div class="index">
+      <h2 style="color: gold">Butun Dersler</h2>
+      <% if(dersler.length > 0){ %> <% dersler.forEach(ders => { %>
+      <a class="tekil" href="/dersler/<%=ders._id%>">
+        <h3><%= ders.baslik %></h3>
+        <p><%= ders.icerik %></p>
+      </a>
+      <% }) %> <% } else{ %>
+      <p>Henuz ders eklenmedi</p>
+      <% } %>
+    </div>
+  </body>
+</html>

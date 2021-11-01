@@ -1,0 +1,118 @@
+body {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-size: larger;
+}
+p,
+h1,
+h2,
+h3,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #222;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+.title {
+  color: red;
+  font-size: 30px;
+}
+nav ul li {
+  margin: 5px;
+}
+nav ul li:hover {
+  text-decoration: underline;
+}
+nav ul li a:hover {
+  color: red;
+}
+nav p,
+nav a {
+  color: #777;
+  font-weight: 300;
+}
+
+h2 {
+  margin-bottom: 40px;
+}
+.content {
+  margin-left: 20px;
+}
+.dersler a {
+  display: block;
+  margin: 40px;
+  padding-left: 30px;
+}
+.dersler a:hover {
+  color: crimson;
+}
+
+.detay {
+  position: relative;
+}
+
+.sil {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50px;
+  padding: 8px;
+}
+
+.sil:hover {
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.ders-ekle form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.ders-ekle input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+}
+.index {
+  margin-top: 15px;
+}
+.index .tekil {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 5px solid purple;
+}
+.index .tekil h3 {
+  padding-left: 5px;
+  color: crimson;
+}
+.index .tekil p {
+  padding-left: 10px;
+}
+
+.ders-ekle label {
+  display: block;
+  margin-top: 24px;
+}
+.ders-ekle button {
+  background: #10ac84;
+  color: black;
+  padding: 6px;
+  border: 5;
+  font-size: 1.2em;
+  cursor: pointer;
+}
